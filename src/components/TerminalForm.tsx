@@ -20,7 +20,7 @@ export function TerminalForm({ className }: { className?: string }) {
 
   // Auto-focus the active input based on the current step
   useEffect(() => {
-    if (step === 0) emailRef.current?.focus();
+    // if (step === 0) emailRef.current?.focus(); // Do not auto-focus on the email to avoid focus jumping to this part when the site loads.
     if (step === 1) messageRef.current?.focus();
     if (step === 2) confirmRef.current?.focus();
   }, [step]);
@@ -151,6 +151,7 @@ export function TerminalForm({ className }: { className?: string }) {
                 onChange={(e) => setEmail(e.target.value)}
                 onKeyDown={handleEmailKeyDown}
                 disabled={step > 0}
+                autoComplete="off"
                 placeholder={step === 0 ? "Enter your email and press Return..." : ""}
                 className="flex-1 bg-transparent border-none outline-none text-slate-200 placeholder:text-slate-600 disabled:text-slate-400 w-full"
               />
@@ -174,6 +175,7 @@ export function TerminalForm({ className }: { className?: string }) {
                 }}
                 onKeyDown={handleMessageKeyDown}
                 disabled={step > 1}
+                autoComplete="off"
                 rows={1}
                 placeholder={step === 1 ? "Type your message... [Enter to save, Shift+Enter for newline]" : ""}
                 className="flex-1 bg-transparent border-none outline-none text-slate-200 placeholder:text-slate-600 disabled:text-slate-400 resize-none w-full overflow-hidden"
@@ -195,6 +197,7 @@ export function TerminalForm({ className }: { className?: string }) {
                 onChange={(e) => setConfirm(e.target.value.trim())}
                 onKeyDown={handleConfirmKeyDown}
                 disabled={step > 2}
+                autoComplete="off"
                 maxLength={3}
                 className="flex-1 bg-transparent border-none outline-none text-slate-200 disabled:text-slate-400 w-full"
               />
