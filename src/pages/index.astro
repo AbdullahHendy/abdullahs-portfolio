@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Hero } from "../components/Hero";
+import AboutSection from "../components/AboutSection.astro";
+import RetroArt from "../components/RetroArt.astro";
+import ExperienceSection from "../components/ExperienceSection.astro";
+import ProjectSection from "../components/ProjectSection.astro";
+import ContactSection from "../components/ContactSection.astro";
+
+const title = "Abdullah Hendy | Portfolio";
+const description = "Portfolio of Abdullah Hendy";
+
+const prefix = "Hi, my name is";
+const name = "Abdullah Hendy";
+
+const line0 = [
+  { text: "i", className: "text-emerald-400 dark:text-emerald-400" },
+  { text: "like", className: "text-emerald-400 dark:text-emerald-400" },
+  { text: "to", className: "text-emerald-400 dark:text-emerald-400" },
+  { text: "discover", className: "text-emerald-400 dark:text-emerald-400" },
+  { text: "new", className: "text-emerald-400 dark:text-emerald-400" },
+  { text: "ways", className: "text-emerald-400 dark:text-emerald-400" },
+  { text: "of", className: "text-emerald-400 dark:text-emerald-400" },
+  { text: "making", className: "text-emerald-400 dark:text-emerald-400" },
+  { text: "things.", className: "text-emerald-400 dark:text-emerald-400" },
+];
+
+const lines = [{ words: line0 }];
+---
+
+<BaseLayout title={title} description={description}>
+  <Hero client:load prefix={prefix} name={name} lines={lines} />
+
+  <RetroArt />
+
+  <AboutSection />
+
+  <ExperienceSection />
+
+  <ProjectSection />
+
+  <ContactSection />
+</BaseLayout>

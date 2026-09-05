@@ -1,0 +1,58 @@
+---
+import {
+  FloatingNav,
+  type NavItem,
+  type PersonalItem,
+} from "../components/ui/floating-navbar";
+import MainHead from "../components/MainHead.astro";
+
+interface Props {
+  title?: string | undefined;
+  description?: string | undefined;
+}
+const { title, description } = Astro.props;
+
+const navItems: NavItem[] = [
+  { name: "home", link: "/" },
+  { name: "about", link: "/about" },
+  { name: "projects", link: "/projects" },
+];
+
+const personalItems: PersonalItem[] = [
+  {
+    name: "GitHub",
+    link: "https://github.com/abdullahhendy",
+  },
+  {
+    name: "LinkedIn",
+    link: "https://linkedin.com/in/abdullah-hendy",
+  },
+];
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth dark font-sans">
+  <head>
+    <MainHead title={title} description={description} />
+  </head>
+  <body
+    class="bg-slate-950 text-slate-100 antialiased min-h-screen selection:bg-emerald-500/30 selection:text-emerald-300 relative bg-grid-pattern"
+  >
+    <!-- Mask to fade the grid out around edges and bottom -->
+    <div
+      class="pointer-events-none fixed inset-0 bg-slate-950 mask-[radial-gradient(ellipse_at_center,transparent_5%,black)] -z-10"
+    >
+    </div>
+
+    <!-- Hydrate React island -->
+    <FloatingNav
+      client:load
+      navItems={navItems}
+      personalItems={personalItems}
+    />
+
+    <main class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-28 pb-16">
+      <slot />
+    </main>
+  </body>
+</html>

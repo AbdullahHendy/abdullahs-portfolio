@@ -1,0 +1,52 @@
+---
+import ExperienceEntry from "./ExperienceEntry.astro";
+import PushButton from "./PushButton.astro";
+---
+
+<section
+  class="w-full max-w-5xl mx-auto px-4 pt-12 flex flex-col gap-4 items-center"
+>
+  {/* Section Label */}
+  <div class="w-full max-w-5xl flex items-center justify-center pt-4 pb-2">
+    <div class="h-px bg-emerald-900/35 w-full"></div>
+    <span
+      class="px-4 font-mono font-bold text-base md:text-lg text-slate-500 uppercase tracking-[0.3em] whitespace-nowrap"
+    >
+      /* SELECT EXPERIENCES */
+    </span>
+    <div class="h-px bg-emerald-900/35 w-full"></div>
+  </div>
+
+  {/* The Stacked Experience Cards */}
+  <div class="w-full max-w-5xl flex flex-col gap-6">
+    {/* UMich M-bits Experience */}
+    <ExperienceEntry
+      company="University-of-Michigan"
+      role="Research-Assistant"
+      logo="/umich.png"
+      duration="2026 - Present"
+      description="At [Lab/University Name], I focus on heterogeneous hardware-software co-design. My primary research involves blah blah blah blah."
+    />
+
+    {/* Keysight R&D Experience */}
+    <ExperienceEntry
+      company="Keysight-Technologies"
+      role="R&D-Intern"
+      logo="/keysight.png"
+      duration="2024 - 2025"
+      description="I worked on developing blah that improved blah by blah%. I also contributed to the development of blah."
+    />
+
+    {/* Cirrus Logic Experience */}
+    <ExperienceEntry
+      company="Cirrus-Logic"
+      role="Applications-Engineer"
+      logo="/cirrus.png"
+      duration="2023 - 2023"
+      description="I optimized blah, reducing latency by blah% and solving blah issues."
+    />
+  </div>
+
+  {/* Full Experience Button */}
+  <PushButton text="Full Experience" route="/about" />
+</section>
