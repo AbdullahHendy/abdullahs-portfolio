@@ -12,22 +12,28 @@ const { company, role, logo, duration, description } = Astro.props;
 <div
   class="group relative w-full bg-slate-950 border border-white/5 rounded-xl p-6 md:p-8 transition-colors hover:border-emerald-500/50 hover:shadow-[0_0_30px_rgba(16,185,129,0.1)]"
 >
-  <div
-    class="flex flex-col md:flex-row justify-between md:items-center gap-2 mb-4"
-  >
-    <h3 class="font-mono text-lg md:text-xl font-bold text-emerald-400">
-      $ cat ~/{company}/"{role}"
+  <div class="flex flex-col md:flex-row justify-between items-start gap-2 mb-4">
+    <h3 class="font-mono text-base md:text-xl font-bold text-emerald-400">
+      $ cd ~/{company}/<br />
+      $ cat "{role}"
     </h3>
 
-    <div class="flex items-center gap-3">
-      <img src={logo} alt="{company} Logo" class="h-8 w-8 object-contain" />
-      <span class="font-mono text-base text-slate-500 whitespace-nowrap">
+    <div class="flex items- gap-3">
+      <img
+        src={logo}
+        alt="{company} Logo"
+        class="h-5 w-5 md:h-6 md:w-6 object-contain"
+      />
+      <span
+        class="font-mono text-sm md:text-base text-slate-500 whitespace-nowrap"
+      >
         [{duration}]
       </span>
     </div>
   </div>
+
   <p
-    class="font-mono font-bold text-lg md:text-xl text-slate-200 leading-relaxed"
+    class="font-mono font-bold text-base md:text-xl text-slate-200 leading-relaxed"
   >
     {description}
   </p>

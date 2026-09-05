@@ -9,7 +9,7 @@ const { text, route } = Astro.props;
 <div class="w-full flex justify-center pt-2 pb-2">
   <a
     href={route}
-    class="group relative inline-flex items-center gap-3 px-8 py-4 bg-slate-950 border border-emerald-900/50 rounded-xl overflow-hidden transition-all duration-300 hover:border-emerald-500 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)]"
+    class="group relative inline-flex items-center gap-3 px-4 py-2 md:px-8 md:py-4 bg-slate-950 border border-emerald-900/50 rounded-xl overflow-hidden transition-all duration-300 hover:border-emerald-500 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)]"
   >
     {/* Matrix Grid Background (Fades in on hover) */}
     <div
@@ -19,7 +19,7 @@ const { text, route } = Astro.props;
 
     {/* Button Text */}
     <span
-      class="relative z-10 font-mono text-slate-300 group-hover:text-emerald-400 font-bold tracking-widest uppercase transition-colors"
+      class="relative z-10 font-mono font-bold text-sm md:text-base text-slate-300 group-hover:text-emerald-400 tracking-widest uppercase transition-colors"
     >
       {text}
     </span>

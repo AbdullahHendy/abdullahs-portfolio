@@ -9,7 +9,7 @@ export function Projects() {
 
       <BentoGridItem
        title={
-          <div className="flex items-center justify-center gap-3">
+          <div className="flex text-base md:text-xl items-center justify-center gap-3">
             <span>CENT Paper Emulation</span>
             <a 
               href="https://github.com/AbdullahHendy/cent-emulation" 
@@ -18,11 +18,15 @@ export function Projects() {
               className="text-slate-500 hover:text-emerald-400 transition-colors cursor-pointer"
               title="View Source on GitHub"
             >
-              <FiGithub className="w-5 h-5" />
+              <FiGithub className="w-4 h-4 md:w-6 md:h-6" />
             </a>
           </div>
         }
-        description="Cycle-accurate FPGA emulation of one CENT paper in a real-world scenario. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description={
+          <div className="text-base md:text-xl">
+            Cycle-accurate FPGA emulation of one CENT paper in a real-world scenario. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        }
         header={
           <a
             href="/cent-emulation.png"
@@ -41,7 +45,7 @@ export function Projects() {
 
       <BentoGridItem
         title={
-          <div className="flex items-center justify-center gap-3">
+          <div className="flex text-base md:text-xl items-center justify-center gap-3">
             <span>Mars Mission Emulation</span>
             <a 
               href="https://github.com/csun-opencv/Mars-Mission-Emulation" 
@@ -50,11 +54,15 @@ export function Projects() {
               className="text-slate-500 hover:text-emerald-400 transition-colors cursor-pointer"
               title="View Source on GitHub"
             >
-              <FiGithub className="w-5 h-5" />
+              <FiGithub className="w-4 h-4 md:w-6 md:h-6" />
             </a>
           </div>
         }
-        description="Emulation of a Mars mission scenario in a simulated environment. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description={
+          <div className="text-base md:text-xl">
+            Emulation of a Mars mission scenario in a simulated environment. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        }
         header={
           <a
             href="/mars-mission-emulation.png"
@@ -74,7 +82,7 @@ export function Projects() {
 
       <BentoGridItem
         title={
-          <div className="flex items-center justify-center gap-3">
+          <div className="flex text-base md:text-xl items-center justify-center gap-3">
             <span>Live Translation Engine</span>
             <a 
               href="https://github.com/AbdullahHendy/live-translation"
@@ -83,11 +91,15 @@ export function Projects() {
               className="text-slate-500 hover:text-emerald-400 transition-colors cursor-pointer"
               title="View Source on GitHub"
             >
-              <FiGithub className="w-5 h-5" />
+              <FiGithub className="w-4 h-4 md:w-6 md:h-6" />
             </a>
           </div>
         }
-        description="Real-time language translation for seamless communication. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description={
+          <div className="text-base md:text-xl">
+            Real-time language translation for seamless communication. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        }
         header={
           <a
             href="/live-translation-pipeline.png"
@@ -106,7 +118,7 @@ export function Projects() {
 
       <BentoGridItem
         title={
-          <div className="flex items-center justify-center gap-3">
+          <div className="flex text-base md:text-xl items-center justify-center gap-3">
             <span>Audio Amplifier</span>
             <a 
               href="https://github.com/AbdullahHendy/Speaker-PCB"
@@ -115,11 +127,15 @@ export function Projects() {
               className="text-slate-500 hover:text-emerald-400 transition-colors cursor-pointer"
               title="View Source on GitHub"
             >
-              <FiGithub className="w-5 h-5" />
+              <FiGithub className="w-4 h-4 md:w-6 md:h-6" />
             </a>
           </div>
         }
-        description="Audio amplifier for high-fidelity sound. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description={
+          <div className="text-base md:text-xl">
+            Audio amplifier for high-fidelity sound. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        }
         header={
           <a
             href="/pcb-3d.png"
