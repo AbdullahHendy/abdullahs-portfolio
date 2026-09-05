@@ -25,3 +25,10 @@ const {
   href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
   rel="stylesheet"
 />
+
+<script is:inline>
+  // Disable automatic scroll restoration to prevent flickering with scroll jumps
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+</script>
