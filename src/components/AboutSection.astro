@@ -1,5 +1,5 @@
 ---
-
+import PushButton from "./PushButton.astro";
 ---
 
 <section
@@ -37,8 +37,7 @@
       interests.]
     </p>
 
-    <p class="font-mono font-bold text-slate-200">
-      [Paragraph 3: Final paragraph here.]
-    </p>
+    {/* Full About Button */}
+    <PushButton text="Full About" route="/about" isDownload={false} />
   </div>
 </section>

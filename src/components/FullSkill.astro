@@ -1,0 +1,121 @@
+---
+const skills = {
+  Languages: [
+    "Python",
+    "C/C++",
+    "Go",
+    "Java",
+    "Dart",
+    "Julia",
+    "MATLAB",
+    "ARM Assembly",
+    "VHDL",
+    "Verilog",
+    "P4",
+  ],
+  Software: [
+    "PyTorch",
+    "CUDA",
+    "OpenCV",
+    "LangChain",
+    "PSpice",
+    "Vivado",
+    "Vitis",
+    "KiCad",
+    "Unity",
+    "ROS",
+    "Docker",
+    "Kubernetes",
+    "Helm",
+    "gRPC",
+    "Linux/Unix",
+  ],
+  Areas: [
+    "Machine Learning",
+    "Computer Vision",
+    "NLP",
+    "RAG",
+    "FPGA",
+    "Embedded Systems",
+    "Microservices",
+    "Virtualization",
+    "Ethernet",
+    "CI/CD",
+  ],
+};
+---
+
+<section class="w-full max-w-5xl mx-auto px-4 py-12">
+  <div class="w-full flex flex-col items-center justify-center mb-6 gap-3">
+    <div class="w-full flex items-center justify-center">
+      <div class="h-px bg-emerald-900/35 w-full"></div>
+      <span
+        class="px-4 font-mono font-bold text-lg md:text-2xl text-slate-500 uppercase tracking-[0.3em] whitespace-nowrap"
+      >
+        /* SKILL LOG */
+      </span>
+      <div class="h-px bg-emerald-900/35 w-full"></div>
+    </div>
+
+    <span class="font-mono text-xs md:text-lg text-slate-600">
+      // skills go brrr.
+    </span>
+  </div>
+
+  {/* Skills Grid */}
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {/* Areas Column */}
+    <div class="flex flex-col gap-4">
+      <h3
+        class="text-emerald-400 font-mono font-bold text-xl md:text-3xl border-b border-white/5 pb-2"
+      >
+        ~/areas
+      </h3>
+      <div class="flex flex-wrap gap-2">
+        {
+          skills.Areas.map((skill) => (
+            <span class="px-3 py-1 bg-slate-900/50 border border-white/5 text-slate-300 font-mono text-sm md:text-base">
+              {skill}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+
+    {/* Languages Column */}
+    <div class="flex flex-col gap-4">
+      <h3
+        class="text-emerald-400 font-mono font-bold text-xl md:text-3xl border-b border-white/5 pb-2"
+      >
+        ~/languages
+      </h3>
+      <div class="flex flex-wrap gap-2">
+        {
+          skills.Languages.map((skill) => (
+            <span class="px-3 py-1 bg-slate-900/50 border border-white/5 text-slate-300 font-mono text-sm md:text-base">
+              {skill}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+
+    {/* Software & Tools Column */}
+    <div class="flex flex-col gap-4">
+      <h3
+        class="text-emerald-400 font-mono font-bold text-xl md:text-3xl border-b border-white/5 pb-2"
+      >
+        ~/software
+      </h3>
+      <div class="flex flex-wrap gap-2">
+        {
+          skills.Software.map((skill) => (
+            <span class="px-3 py-1 bg-slate-900/50 border border-white/5 text-slate-300 font-mono text-sm md:text-base">
+              {skill}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

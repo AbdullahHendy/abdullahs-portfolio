@@ -3,7 +3,7 @@ import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 import { TfiCup } from "react-icons/tfi";
 import { FiGithub } from "react-icons/fi";
 
-export function Projects() {
+export function MainProjects() {
   return (
     <BentoGrid className="max-w-5xl">
 

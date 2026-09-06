@@ -19,59 +19,57 @@ const acceleratorImg = "/accelerator-art.png";
 const ART_GEN_MODE = false;
 ---
 
-<section
-  class="w-full max-w-5xl mx-auto px-4 pt-12 flex flex-col gap-6 items-center"
+{/* The 3-Column Array of ASCII Art */}
+<div
+  class="w-full grid grid-cols-3 max-w-3xl mx-auto px-4 pt-12 flex-col gap-3 md:gap-6 items-center"
 >
-  {/* Top Row: The 3-Column Array of ASCII Art */}
-  <div class="w-full grid grid-cols-3 max-w-3xl mx-auto gap-3 md:gap-6">
-    {/* Box 1: DRAM */}
-    <div
-      class="bg-slate-950/50 rounded-2xl border border-white/10 flex items-center justify-center overflow-hidden aspect-square p-6"
-    >
-      {
-        ART_GEN_MODE ? (
-          // Pick an image to be converted to ASCII art and change paramters below. Don't forget to turn ART_GEN_MODE to false when done
-          <AsciiArt
-            client:load
-            src="/dram.png"
-            resolution={362}
-            charset="blocks"
-            color="#60a5fa"
-            animated={false}
-            inverted={true}
-            className="w-full h-full"
-            objectFit="contain"
-          />
-        ) : (
-          <img
-            src={dramImg}
-            alt="DRAM Ascii Art"
-            class="w-full h-full object-contain"
-          />
-        )
-      }
-    </div>
-
-    {/* Box 2: CPU */}
-    <div
-      class="bg-slate-950/50 rounded-2xl border border-white/10 flex items-center justify-center overflow-hidden aspect-square p-6"
-    >
-      <img
-        src={cpuImg}
-        alt="CPU Ascii Art"
-        class="w-full h-full object-contain"
-      />
-    </div>
-
-    {/* Box 3: Accelerator */}
-    <div
-      class="bg-slate-950/50 rounded-2xl border border-white/10 flex items-center justify-center overflow-hidden aspect-square p-6"
-    >
-      <img
-        src={acceleratorImg}
-        alt="Accelerator Ascii Art"
-        class="w-full h-full object-contain"
-      />
-    </div>
+  {/* Box 1: DRAM */}
+  <div
+    class="bg-slate-950/50 rounded-2xl border border-white/10 flex items-center justify-center overflow-hidden aspect-square p-6"
+  >
+    {
+      ART_GEN_MODE ? (
+        // Pick an image to be converted to ASCII art and change paramters below. Don't forget to turn ART_GEN_MODE to false when done
+        <AsciiArt
+          client:visible
+          src="/dram.png"
+          resolution={362}
+          charset="blocks"
+          color="#60a5fa"
+          animated={false}
+          inverted={true}
+          className="w-full h-full"
+          objectFit="contain"
+        />
+      ) : (
+        <img
+          src={dramImg}
+          alt="DRAM Ascii Art"
+          class="w-full h-full object-contain"
+        />
+      )
+    }
   </div>
-</section>
+
+  {/* Box 2: CPU */}
+  <div
+    class="bg-slate-950/50 rounded-2xl border border-white/10 flex items-center justify-center overflow-hidden aspect-square p-6"
+  >
+    <img
+      src={cpuImg}
+      alt="CPU Ascii Art"
+      class="w-full h-full object-contain"
+    />
+  </div>
+
+  {/* Box 3: Accelerator */}
+  <div
+    class="bg-slate-950/50 rounded-2xl border border-white/10 flex items-center justify-center overflow-hidden aspect-square p-6"
+  >
+    <img
+      src={acceleratorImg}
+      alt="Accelerator Ascii Art"
+      class="w-full h-full object-contain"
+    />
+  </div>
+</div>

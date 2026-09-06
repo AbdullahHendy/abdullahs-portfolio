@@ -2,13 +2,15 @@
 interface Props {
   text: string;
   route: string;
+  isDownload?: boolean;
 }
-const { text, route } = Astro.props;
+const { text, route, isDownload } = Astro.props;
 ---
 
 <div class="w-full flex justify-center pt-2 pb-2">
   <a
     href={route}
+    download={isDownload ? true : undefined}
     class="group relative inline-flex items-center gap-3 px-4 py-2 md:px-8 md:py-4 bg-slate-950 border border-emerald-900/50 rounded-xl overflow-hidden transition-all duration-300 hover:border-emerald-500 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)]"
   >
     {/* Matrix Grid Background (Fades in on hover) */}

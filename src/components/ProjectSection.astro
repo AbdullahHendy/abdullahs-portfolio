@@ -1,5 +1,5 @@
 ---
-import { Projects } from "./Projects";
+import { MainProjects } from "./MainProjects";
 import PushButton from "./PushButton.astro";
 ---
 
@@ -27,9 +27,9 @@ import PushButton from "./PushButton.astro";
     </div>
 
     {/* Project Cards */}
-    <Projects client:visible />
+    <MainProjects client:visible />
 
     {/* Full Projects Button */}
-    <PushButton text="Full Projects" route="/projects" />
+    <PushButton text="Full Projects" route="/projects" isDownload={false} />
   </div>
 </section>

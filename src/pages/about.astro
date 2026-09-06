@@ -1,0 +1,26 @@
+---
+import FullBio from "../components/FullBio.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FullEducation from "../components/FullEducation.astro";
+import FullExperience from "../components/FullExperience.astro";
+import Footer from "../components/Footer.astro";
+import FullAward from "../components/FullAward.astro";
+import FullSkill from "../components/FullSkill.astro";
+
+const title = "Abdullah Hendy | About";
+const description = "About Abdullah Hendy";
+---
+
+<BaseLayout title={title} description={description}>
+  <FullBio />
+
+  <FullEducation />
+
+  <FullExperience />
+
+  <FullAward />
+
+  <FullSkill />
+
+  <Footer />
+</BaseLayout>

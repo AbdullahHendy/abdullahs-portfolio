@@ -69,7 +69,7 @@ export const FloatingNav: React.FC<FloatingNavProps> = ({
           >
             <Terminal className="w-5 h-5 text-emerald-500" />
             <span className="hidden sm:block">abdullah hendy</span>
-            
+            <span className="hidden sm:inline animate-pulse text-emerald-400">_</span>
           </a>
 
           {/* Center: The Pill Navigation */}

@@ -1,0 +1,75 @@
+---
+import { AsciiArt } from "../components/ui/ascii-art";
+---
+
+<section
+  class="w-full max-w-5xl mx-auto px-4 pt-12 pb-4 flex flex-col md:flex-row gap-8 md:gap-12"
+>
+  {/* Left: Profile and Metadata */}
+  <div
+    class="w-full md:w-1/3 flex flex-col gap-6 font-mono text-sm md:text-base"
+  >
+    <div
+      class="w-full aspect-square bg-slate-900/50 border border-white/5 rounded-xl flex items-center justify-center overflow-hidden"
+    >
+      {/* ASCII Art */}
+      <AsciiArt
+        client:only="react"
+        src="/me.jpg"
+        resolution={200}
+        charset="dense"
+        colored={true}
+        animated={true}
+        animationStyle="fade"
+        animationDuration={2}
+        animateOnView={false}
+        className="w-full h-full aspect-square"
+        objectFit="contain"
+      />
+    </div>
+
+    <div
+      class="flex flex-col gap-2 text-slate-400 border border-white/5 bg-slate-950 p-4 rounded-lg"
+    >
+      <div class="flex justify-between">
+        <span class="text-emerald-500">Location:</span>
+        <span class="text-slate-300">Ann Arbor, MI</span>
+      </div>
+      <div class="flex justify-between">
+        <span class="text-emerald-500">Status:</span>
+        <span class="text-slate-300">PhD Applicant</span>
+      </div>
+      <div class="flex justify-between">
+        <span class="text-emerald-500">Focus:</span>
+        <span class="text-slate-300">LLM Co-Design</span>
+      </div>
+      <div class="flex justify-between">
+        <span class="text-emerald-500">Language:</span>
+        <span class="text-slate-300">HDL | C | Python</span>
+      </div>
+    </div>
+  </div>
+
+  {/* Right: Full Bio  */}
+  <div
+    class="w-full md:w-2/3 flex flex-col gap-6 text-slate-300 leading-relaxed font-mono text-base md:text-lg"
+  >
+    <div class="font-mono text-2xl md:text-4xl font-bold text-slate-200 pb-4">
+      <span class="text-emerald-400">~/</span>abdullah_hendy
+      <span class="animate-pulse text-emerald-400">_</span>
+    </div>
+
+    <p>[Paragraph 1: General background, college, work, research, etc.]</p>
+
+    <p>
+      [Paragraph 2: Detailed PhD aspirations, specific hardware related
+      research, and why llm infra matters to me. (no offense to model people
+      joke)]
+    </p>
+
+    <p>
+      [Paragraph 3: Recent research experiences and exposure to different
+      methodologies.]
+    </p>
+  </div>
+</section>

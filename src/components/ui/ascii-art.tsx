@@ -426,7 +426,12 @@ export const AsciiArt: React.FC<AsciiArtProps> = ({
     const canvas = canvasRef.current;
     if (!container || !canvas) return;
 
-    drawCanvas(1);
+    if (shouldShowStatic || hasAnimated) {
+      drawCanvas(1);
+    } else {
+      drawCanvas(0);
+    }
+
   }, [isLoaded, asciiData, drawCanvas]);
 
   useEffect(() => {
@@ -436,7 +441,10 @@ export const AsciiArt: React.FC<AsciiArtProps> = ({
     if (!container) return;
 
     const resizeObserver = new ResizeObserver(() => {
-      drawCanvas(1);
+
+      if (shouldShowStatic || hasAnimated) {
+        drawCanvas(1);
+      }
     });
 
     resizeObserver.observe(container);
