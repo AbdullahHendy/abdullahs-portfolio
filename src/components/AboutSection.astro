@@ -18,23 +18,35 @@ import PushButton from "./PushButton.astro";
 
   {/* Terminal Command and Paragraphs */}
   <div
-    class="w-full max-w-5xl space-y-6 text-base md:text-xl text-slate-400 leading-relaxed font-sans"
+    class="w-full max-w-5xl space-y-6 text-base md:text-xl text-slate-400 leading-relaxed font-mono font-bold"
   >
-    <div class="font-mono text-emerald-400 font-bold mb-4">
+    <div class="text-emerald-400 text-lg md:text-2xl mb-4">
       <span>[abdullah@abdullahs ~]$ whoami</span>
     </div>
 
-    <p class="font-mono font-bold text-slate-200">
-      [Paragraph 1: Talk about background leading to current work and interests.
-      lorem lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem lorem
-      ipsum dolor sit amet, consectetur adipiscing elit. lorem lorem ipsum dolor
-      sit amet, consectetur adipiscing elit. lorem lorem ipsum dolor sit amet,
-      consectetur adipiscing elit. lorem]
+    <p class="text-slate-200">
+      I am a computer engineer, probably because I could never pick between
+      hardware and software — I love both. My work has always lived at the
+      bottom of the stack: the low-level stuff. Whether it's designing and
+      laying out PCBs, writing RTL on FPGAs, or writing bare-metal C. And even
+      when I move up the stack and touch high-level software, I stick to system
+      languages — shout out to Golang — building software that directly
+      interacts with hardware. Go microservices talking to FPGAs? Yes, please.
     </p>
 
-    <p class="font-mono font-bold text-slate-200">
-      [Paragraph 2: Talk about PhD interests and exact focus and research
-      interests.]
+    <p class="text-slate-200">
+      I recently finished my Master's at UMich. During my last semester, I
+      started working with Dr. Reetu Das on building a cycle-accurate hardware
+      emulation for their recent <a
+        href="https://dl.acm.org/doi/10.1145/3676641.3716267"
+        class="text-emerald-400 hover:text-emerald-500 transition-colors underline duration-300"
+      >
+        PIM-based GPU-less LLM accelerator paper
+      </a>. I didn't realize how much LLM decoding was bottlenecked by memory
+      bandwidth and it sparked my interest in LLM acceleration and AI infra
+      research. Now, I'm looking for PhD opportunities to contribute to solving
+      LLM acceleration bottlenecks so that, one day, we can run large LLMs
+      without needing a cluster of a million GPUs.
     </p>
 
     {/* Full About Button */}

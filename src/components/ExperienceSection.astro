@@ -24,26 +24,30 @@ import PushButton from "./PushButton.astro";
       company="University-of-Michigan"
       role="Research-Assistant"
       logo="/umich.png"
-      duration="2026 - Present"
-      description="At [Lab/University Name], I focus on heterogeneous hardware-software co-design. My primary research involves blah blah blah blah."
+      duration="2026 - Now"
+      description={`Under the guidance of Dr. Reetu Das, I work on developing a cycle-accurate hardware emulation of a <a href="https://dl.acm.org/doi/10.1145/3676641.3716267" target="_blank" class="text-emerald-400 underline hover:text-emerald-300">CENT</a> device leveraging CMU's Ramulator2 DRAM simulator. 
+                    <br /> This work targets the Amazon F2 Cloud FPGA (XCVU47P HBM2) to validate the emulation across different GPT and LLaMA inference workloads.`}
     />
 
     {/* Keysight R&D Experience */}
     <ExperienceEntry
       company="Keysight-Technologies"
-      role="R&D-Intern"
+      role="R&D-Engineer"
       logo="/keysight.png"
       duration="2024 - 2025"
-      description="I worked on developing blah that improved blah by blah%. I also contributed to the development of blah."
+      description={`During my time there, I worked on diverse projects. In the beginning, I developed a P4-based packet capture module inside a programmable switch pipeline to enable low-level network traffic debugging. 
+                    <br /> After that, I worked on modernizing test equipment synchronization infrastructure by implementing custom RTL logic on timing FPGAs and its supporting gRPC microservices to allow for nanosecond-level precision.
+                    <br /> Later, I moved to AI/HPC infrastructure and worked on optimizing DMA-based data movement using PCIe Gen5 on Xilinx Versal SoC.`}
     />
 
     {/* Cirrus Logic Experience */}
     <ExperienceEntry
       company="Cirrus-Logic"
-      role="Applications-Engineer"
+      role="Applications-Engineer-Intern"
       logo="/cirrus.png"
       duration="2023 - 2023"
-      description="I optimized blah, reducing latency by blah% and solving blah issues."
+      description={`At this internship, I mainly worked on developing a unified Python API wrapping drivers of silicon emulation platforms with multiple FPGAs for internal and external customer workflows.
+                    <br /> This helped standarize and simplify verification workflows by abstracting away underlying hardware variations across different emulation platforms.`}
     />
   </div>
 

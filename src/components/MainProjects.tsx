@@ -24,7 +24,7 @@ export function MainProjects() {
         }
         description={
           <div className="text-base md:text-xl">
-            Cycle-accurate FPGA emulation of one CENT paper in a real-world scenario. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            A cycle-accurate FPGA emulation of a <a href="https://dl.acm.org/doi/10.1145/3676641.3716267" target="_blank" className="text-emerald-400 underline hover:text-emerald-300">CENT paper device</a> using CMU's Ramulator2 DRAM simulator as a reference for GDDR6 PIM timing. 
           </div>
         }
         header={
@@ -60,7 +60,7 @@ export function MainProjects() {
         }
         description={
           <div className="text-base md:text-xl">
-            Emulation of a Mars mission scenario in a simulated environment. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            An award-winning object detection drone wirelessly commanding a wheeled robot to perform tasks, mimicking the NASA's Mars Exploration Mission. <br />Finalist in the <span className="text-amber-400 font-bold">2023 OpenCV AI Competition.</span>
           </div>
         }
         header={
@@ -97,7 +97,7 @@ export function MainProjects() {
         }
         description={
           <div className="text-base md:text-xl">
-            Real-time language translation for seamless communication. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            A real-time speech-to-text translation backend engine. Streams Opus or raw PCM audio from client to server over WebSockets for live transcription and optional translation. <br /> Supports CLI and Python API.
           </div>
         }
         header={
@@ -133,7 +133,7 @@ export function MainProjects() {
         }
         description={
           <div className="text-base md:text-xl">
-            Audio amplifier for high-fidelity sound. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            A complete open source design of a 5W class AB audio amplifier with a power supply circuit and a speaker with high-fidelity sound quality. <br /> The repository includes full documentation, schematics, and fabrication files.
           </div>
         }
         header={
