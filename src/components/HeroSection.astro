@@ -1,0 +1,22 @@
+---
+import { Hero } from "../components/Hero";
+
+const prefix = "Hi, my name is";
+const name = "Abdullah Hendy";
+
+const line0 = [
+  { text: "i", className: "text-emerald-400 dark:text-emerald-400" },
+  { text: "like", className: "text-emerald-400 dark:text-emerald-400" },
+  { text: "to", className: "text-emerald-400 dark:text-emerald-400" },
+  { text: "discover", className: "text-emerald-400 dark:text-emerald-400" },
+  { text: "new", className: "text-emerald-400 dark:text-emerald-400" },
+  { text: "ways", className: "text-emerald-400 dark:text-emerald-400" },
+  { text: "of", className: "text-emerald-400 dark:text-emerald-400" },
+  { text: "making", className: "text-emerald-400 dark:text-emerald-400" },
+  { text: "things.", className: "text-emerald-400 dark:text-emerald-400" },
+];
+
+const lines = [{ words: line0 }];
+---
+
+<Hero client:load prefix={prefix} name={name} lines={lines} />
