@@ -25,7 +25,9 @@ export function AwardTimeline() {
           <div className="flex flex-col gap-1.5 text-sm md:text-lg text-slate-500 font-mono font-bold leading-relaxed">
             <div className="flex gap-3 items-start">
               <span className="text-emerald-500 mt-0.5">{"[>]"}</span>
-              <span className="text-slate-200">Description of the award and project and link.</span>
+              <span className="text-slate-200">Won a popular finalist award for the <a 
+                href="https://www.hackster.io/512283/mars-mission-emulation-1c05ca" className="text-emerald-400 hover:text-emerald-500 transition-colors underline duration-300">Mars Mission Emulation</a> project. 
+              </span>
             </div>
           </div>
 
@@ -33,7 +35,7 @@ export function AwardTimeline() {
       ),
     },
     {
-      year: "2020",
+      year: "2021",
       content: (
         <div className="flex flex-col">
           <div className="flex items-center gap-3 md:gap-4 mb-2">
@@ -43,20 +45,20 @@ export function AwardTimeline() {
               className="h-8 w-8 md:h-10 md:w-10 object-contain"
             />
             <h4 className="text-lg md:text-2xl font-bold text-slate-200 leading-tight">
-              CSUN WAVES 2020 Annual Book
+              CSUN WAVES 2021 Annual Book
             </h4>
           </div>
 
           <div className="flex flex-col gap-1">
             <p className="text-emerald-400 font-mono font-bold text-base md:text-xl">
-              Published Essay - "dasdas"
+              Published Essay - WAVES 3rd Edition
             </p>
           </div>
 
           <div className="flex flex-col gap-1.5 text-sm md:text-lg text-slate-500 font-mono font-bold leading-relaxed">
             <div className="flex gap-3 items-start">
               <span className="text-emerald-500 mt-0.5">{"[>]"}</span>
-              <span className="text-slate-200">Description of the award and project and link.</span>
+              <span className="text-slate-200">Got the essay A Well-Preserved Neighborhood: Angelino Heights published in the CSUN WAVES 3rd Edition published by Macmillan learning: ISBN 978-1-5339-2662-3.</span>
             </div>
           </div>
         </div>
