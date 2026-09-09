@@ -58,7 +58,7 @@ export function AwardTimeline() {
           <div className="flex flex-col gap-1.5 text-sm md:text-lg text-slate-500 font-mono font-bold leading-relaxed">
             <div className="flex gap-3 items-start">
               <span className="text-emerald-500 mt-0.5">{"[>]"}</span>
-              <span className="text-slate-200">Got the essay A Well-Preserved Neighborhood: Angelino Heights published in the CSUN WAVES 3rd Edition published by Macmillan learning: ISBN 978-1-5339-2662-3.</span>
+              <span className="text-slate-200">Got the essay <em>A Well-Preserved Neighborhood: Angelino Heights</em> published in the CSUN WAVES 3rd Edition published by Macmillan learning: ISBN 978-1-5339-2662-3.</span>
             </div>
           </div>
         </div>
