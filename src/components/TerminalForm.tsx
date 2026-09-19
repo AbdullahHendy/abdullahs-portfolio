@@ -12,25 +12,32 @@ export function TerminalForm({ className }: { className?: string }) {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [confirm, setConfirm] = useState("");
+  const [restart, setRestart] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error" | "aborted">("idle");
+  const [hasReset, setHasReset] = useState(false); // Track if the form has been reset to prevent auto-focus on email after reset
 
   const emailRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
   const confirmRef = useRef<HTMLInputElement>(null);
+  const restartRef = useRef<HTMLInputElement>(null);
 
   // Auto-focus the active input based on the current step
   useEffect(() => {
-    // if (step === 0) emailRef.current?.focus(); // Do not auto-focus on the email to avoid focus jumping to this part when the site loads.
+    // Only auto-focus email input if the form has been reset i.e the user has completed a form and the viewport is at the terminal form already.
+    if (step === 0 && hasReset) emailRef.current?.focus();
     if (step === 1) messageRef.current?.focus();
     if (step === 2) confirmRef.current?.focus();
-  }, [step]);
+    if (step === 3 && status !== "loading") restartRef.current?.focus();
+  }, [step, status, hasReset]);
 
   // Reset button handler to clear all inputs and reset the form state
   const handleReset = () => {
+    setHasReset(true);
     setStep(0);
     setEmail("");
     setMessage("");
     setConfirm("");
+    setRestart("");
     setStatus("idle");
     // Reset the textarea height back to 1 line
     if (messageRef.current) {
@@ -67,6 +74,18 @@ export function TerminalForm({ className }: { className?: string }) {
       } else if (val === "n" || val === "no") {
         setStatus("aborted");
         setStep(3);
+      }
+    }
+  };
+
+  // handle Enter key for restart input (y)
+  const handleRestartKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      const val = restart.trim().toLowerCase();
+      
+      if (val === "y" || val === "yes") {
+        handleReset();
       }
     }
   };
@@ -141,7 +160,7 @@ export function TerminalForm({ className }: { className?: string }) {
         {/* Step 0: Email Input */}
         {step >= 0 && (
           <div className={step > 0 ? "opacity-50" : "opacity-100"}>
-            <Prompt cmd="set_sender_email:" />
+            <Prompt cmd="set_sender_email" />
             <div className="flex items-center mt-1">
               <span className="text-emerald-400 mr-2">{">"}</span>
               <input
@@ -162,7 +181,7 @@ export function TerminalForm({ className }: { className?: string }) {
         {/* Step 1: Message Input */}
         {step >= 1 && (
           <div className={step > 1 ? "opacity-50 animate-in fade-in" : "animate-in fade-in"}>
-            <Prompt cmd="write_message:" />
+            <Prompt cmd="write_message" />
             <div className="flex items-start mt-1">
               <span className="text-emerald-400 mr-2 mt-1">{">"}</span>
               <textarea
@@ -187,7 +206,7 @@ export function TerminalForm({ className }: { className?: string }) {
         {/* Step 2: Confirmation */}
         {step >= 2 && (
           <div className={step > 2 ? "opacity-50 animate-in fade-in" : "animate-in fade-in"}>
-            <Prompt cmd="send_message (y/n):" />
+            <Prompt cmd="send_message (y/n)" />
             <div className="flex items-center mt-1">
               <span className="text-emerald-400 mr-2">{">"}</span>
               <input
@@ -215,23 +234,45 @@ export function TerminalForm({ className }: { className?: string }) {
             )}
             {status === "success" && (
               <div className="text-emerald-400">
-                [ 200 OK ] Payload delivered successfully. Connection terminated.
+                <div> [ 200 OK ] Payload delivered successfully. Connection terminated.</div>
+                <div className="mt-1 text-emerald-300/80">
+                  TYPE <span className="font-bold">y</span> TO START OVER.
+                </div>
               </div>
             )}
             {status === "aborted" && (
               <div className="text-amber-400">
-                [ ABORTED ] Message discarded. Connection closed.
+                <div> [ ABORTED ] Message discarded. Connection closed.</div>
+                <div className="mt-1 text-amber-300/80">
+                  TYPE <span className="font-bold">y</span> TO START OVER.
+                </div>
               </div>
             )}
             {status === "error" && (
               <div className="text-red-400">
-                [ ERR 500 ] Packet loss detected. Connection failed.
+                <div> [ ERR 500 ] Packet loss detected. Connection failed.</div>
+                <div className="mt-1 text-red-300/80">
+                  TYPE <span className="font-bold">y</span> TO TRY AGAIN.
+                </div>
               </div>
             )}
             {status !== "loading" && (
-              <div className="mt-2 flex items-center">
-                <Prompt cmd="" />
-                <span className="w-2.5 h-5 bg-emerald-400 animate-pulse inline-block align-middle ml-1 mt-1"></span>
+              <div className="mt-2 animate-in fade-in">
+                <Prompt cmd="restart_session (y)" />
+                <div className="flex items-center mt-1">
+                  <span className="text-emerald-400 mr-2">{">"}</span>
+                  <input
+                    ref={restartRef}
+                    type="text"
+                    value={restart}
+                    onChange={(e) => setRestart(e.target.value.trim())}
+                    onKeyDown={handleRestartKeyDown}
+                    disabled={step > 3}
+                    autoComplete="off"
+                    maxLength={3}
+                    className="flex-1 bg-transparent border-none outline-none text-slate-200 disabled:text-slate-400 w-full"
+                  />
+                </div>
               </div>
             )}
           </div>
