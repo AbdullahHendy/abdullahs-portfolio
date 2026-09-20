@@ -12,7 +12,7 @@ export function MainProjects() {
           <div className="flex text-base md:text-xl items-center justify-center gap-3">
             <span>CENT Paper Emulation</span>
             <a 
-              href="https://github.com/AbdullahHendy/cent-emulation" 
+              href="https://github.com/AbdullahHendy/cent-emulation-aws-f2" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-slate-500 hover:text-emerald-400 transition-colors cursor-pointer"
@@ -24,7 +24,7 @@ export function MainProjects() {
         }
         description={
           <div className="text-base md:text-xl">
-            A cycle-accurate FPGA emulation of a <a href="https://dl.acm.org/doi/10.1145/3676641.3716267" target="_blank" className="text-emerald-400 underline hover:text-emerald-300">CENT paper device</a> using CMU's Ramulator2 DRAM simulator as a reference for GDDR6 PIM timing. 
+            A cycle-accurate FPGA emulation of a <a href="https://dl.acm.org/doi/10.1145/3676641.3716267" target="_blank" className="text-emerald-400 underline hover:text-emerald-300">CENT paper device</a> using Ramulator2 DRAM simulator and Winbond LPDDR4 as a reference for DDR PIM timing and extended LiteDRAM core to support the new ISA. 
           </div>
         }
         header={
@@ -41,6 +41,42 @@ export function MainProjects() {
           </a>
         }
         className="col-span-1 bg-slate-950 border-white/5 hover:border-emerald-500/50"
+      />
+
+      <BentoGridItem
+        title={
+          <div className="flex text-base md:text-xl items-center justify-center gap-3">
+            <span>FastConv2d CUDA Engine</span>
+            <a 
+              href="https://github.com/AbdullahHendy/fast-conv2d-cuda"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-slate-500 hover:text-emerald-400 transition-colors cursor-pointer"
+              title="View Source on GitHub"
+            >
+              <FiGithub className="w-4 h-4 md:w-6 md:h-6" />
+            </a>
+          </div>
+        }
+        description={
+          <div className="text-base md:text-xl">
+            Custom CUDA 2D convolution engines hooked into PyTorch via C++ extensions. Faster than PyTorch/cuDNN by 3x on a LeNet-style CNN.
+          </div>
+        }
+        header={
+          <a
+            href="/cnn.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/cnn.png"
+              alt="CNN Pipeline"
+              className="w-full h-full object-contain cursor-pointer"
+            />
+          </a>
+        }
+        className="bg-slate-950 border-white/5 hover:border-emerald-500/50"
       />
 
       <BentoGridItem
@@ -78,42 +114,6 @@ export function MainProjects() {
         }
         icon={<TfiCup className="text-amber-400 font-bold" />}
         className="col-span-1 bg-slate-950 border-white/5 hover:border-emerald-500/50"
-      />
-
-      <BentoGridItem
-        title={
-          <div className="flex text-base md:text-xl items-center justify-center gap-3">
-            <span>Live Translation Engine</span>
-            <a 
-              href="https://github.com/AbdullahHendy/live-translation"
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-slate-500 hover:text-emerald-400 transition-colors cursor-pointer"
-              title="View Source on GitHub"
-            >
-              <FiGithub className="w-4 h-4 md:w-6 md:h-6" />
-            </a>
-          </div>
-        }
-        description={
-          <div className="text-base md:text-xl">
-            A real-time speech-to-text translation backend engine. Streams Opus or raw PCM audio from client to server over WebSockets for live transcription and optional translation. <br /> Supports CLI and Python API.
-          </div>
-        }
-        header={
-          <a
-            href="/live-translation-pipeline.png"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/live-translation-pipeline.png"
-              alt="Live Translation Engine"
-              className="w-full h-full object-contain cursor-pointer"
-            />
-          </a>
-        }
-        className="bg-slate-950 border-white/5 hover:border-emerald-500/50"
       />
 
       <BentoGridItem
