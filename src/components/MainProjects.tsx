@@ -24,7 +24,8 @@ export function MainProjects() {
         }
         description={
           <div className="text-base md:text-xl">
-            A cycle-accurate FPGA emulation of a <a href="https://dl.acm.org/doi/10.1145/3676641.3716267" target="_blank" className="text-emerald-400 underline hover:text-emerald-300">CENT paper device</a> using Ramulator2 DRAM simulator and Winbond LPDDR4 as a reference for DDR PIM timing and extended LiteDRAM core to support the new ISA. 
+            A cycle-accurate FPGA emulation of a <a href="https://dl.acm.org/doi/10.1145/3676641.3716267" target="_blank" className="text-emerald-400 underline hover:text-emerald-300">CENT paper device</a> using 
+            Ramulator2 DRAM simulator and Winbond LPDDR4 as references for DDR PIM timing models. Also extending the LiteDRAM project core to support the new CENT ISA. 
           </div>
         }
         header={
