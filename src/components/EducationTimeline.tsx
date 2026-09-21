@@ -13,12 +13,12 @@ export function EducationTimeline() {
               alt="University of Michigan Logo"
               className="h-8 w-8 md:h-10 md:w-10 object-contain"
             />
-            <h4 className="text-lg md:text-2xl font-bold text-slate-200 leading-tight">
+            <h4 className="text-base md:text-2xl font-bold text-slate-200 leading-tight">
               University of Michigan Ann Arbor
             </h4>
           </div>
 
-          <p className="text-emerald-400 font-mono font-bold text-base md:text-xl mb-4 md:mb-2">
+          <p className="text-emerald-400 font-mono font-bold text-sm md:text-xl mb-4 md:mb-2">
             M.S. — Electrical and Computer Engineering
           </p>
 
@@ -42,13 +42,13 @@ export function EducationTimeline() {
               alt="CSUN Logo"
               className="h-8 w-8 md:h-10 md:w-10 object-contain"
             />
-            <h4 className="text-lg md:text-2xl font-bold text-slate-200 leading-tight">
+            <h4 className="text-base md:text-2xl font-bold text-slate-200 leading-tight">
               Cal State University - Northridge
             </h4>
           </div>
 
           <div className="flex flex-col gap-1">
-            <p className="text-emerald-400 font-mono font-bold text-base md:text-xl">
+            <p className="text-emerald-400 font-mono font-bold text-sm md:text-xl">
               B.S. — Computer Engineering
             </p>
             <p className="text-emerald-500 font-mono font-bold text-sm md:text-lg mb-4 md:mb-2">

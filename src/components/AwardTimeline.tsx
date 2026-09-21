@@ -13,12 +13,12 @@ export function AwardTimeline() {
               alt="OpenCV Logo"
               className="h-8 w-8 md:h-10 md:w-10 object-contain"
             />
-            <h4 className="text-lg md:text-2xl font-bold text-slate-200 leading-tight">
+            <h4 className="text-base md:text-2xl font-bold text-slate-200 leading-tight">
               OpenCV AI 2023 Competition
             </h4>
           </div>
 
-          <p className="text-emerald-400 font-mono font-bold text-base md:text-xl mb-4 md:mb-2">
+          <p className="text-emerald-400 font-mono font-bold text-sm md:text-xl mb-4">
             Finalist - ~Top 10%
           </p>
 
@@ -44,16 +44,14 @@ export function AwardTimeline() {
               alt="CSUN Logo"
               className="h-8 w-8 md:h-10 md:w-10 object-contain"
             />
-            <h4 className="text-lg md:text-2xl font-bold text-slate-200 leading-tight">
+            <h4 className="text-base md:text-2xl font-bold text-slate-200 leading-tight">
               CSUN WAVES 2021 Annual Book
             </h4>
           </div>
 
-          <div className="flex flex-col gap-1">
-            <p className="text-emerald-400 font-mono font-bold text-base md:text-xl">
-              Published Essay - WAVES 3rd Edition
-            </p>
-          </div>
+          <p className="text-emerald-400 font-mono font-bold text-sm md:text-xl mb-4">
+            Published Essay - WAVES 3rd Edition
+          </p>
 
           <div className="flex flex-col gap-1.5 text-sm md:text-lg text-slate-500 font-mono font-bold leading-relaxed">
             <div className="flex gap-3 items-start">
