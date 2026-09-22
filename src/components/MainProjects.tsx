@@ -61,7 +61,7 @@ export function MainProjects() {
         }
         description={
           <div className="text-base md:text-xl">
-            Custom CUDA 2D convolution engines hooked into PyTorch via C++ extensions. Faster than PyTorch/cuDNN by 3x on a LeNet-style CNN.
+            Custom CUDA 2D convolution engines hooked into PyTorch via C++ extensions. Faster than PyTorch/cuDNN by 3x on a LeNet-style CNN running on a V100 GPU.
           </div>
         }
         header={
