@@ -18,7 +18,7 @@ export function MainProjects() {
               className="text-slate-500 hover:text-emerald-400 transition-colors cursor-pointer"
               title="View Source on GitHub"
             >
-              <FiGithub className="w-4 h-4 md:w-6 md:h-6 transition-all aduration-300 hover:scale-115 animate-[bounce_1s_ease-in-out_infinite] hover:animate-none" />
+              <FiGithub className="w-4 h-4 md:w-6 md:h-6 transition-all duration-300 hover:scale-115 animate-[bounce_1s_ease-in-out_infinite] hover:animate-none" />
             </a>
           </div>
         }
@@ -91,7 +91,7 @@ export function MainProjects() {
               className="text-slate-500 hover:text-emerald-400 transition-colors cursor-pointer"
               title="View Source on GitHub"
             >
-              <FiGithub className="w-4 h-4 md:w-6 md:h-6 transition-all aduration-300 hover:scale-115 animate-[bounce_1s_ease-in-out_infinite] hover:animate-none" />
+              <FiGithub className="w-4 h-4 md:w-6 md:h-6 transition-all duration-300 hover:scale-115 animate-[bounce_1s_ease-in-out_infinite] hover:animate-none" />
             </a>
           </div>
         }
@@ -128,7 +128,7 @@ export function MainProjects() {
               className="text-slate-500 hover:text-emerald-400 transition-colors cursor-pointer"
               title="View Source on GitHub"
             >
-              <FiGithub className="w-4 h-4 md:w-6 md:h-6 transition-all aduration-300 hover:scale-115 animate-[bounce_1s_ease-in-out_infinite] hover:animate-none" />
+              <FiGithub className="w-4 h-4 md:w-6 md:h-6 transition-all duration-300 hover:scale-115 animate-[bounce_1s_ease-in-out_infinite] hover:animate-none" />
             </a>
           </div>
         }

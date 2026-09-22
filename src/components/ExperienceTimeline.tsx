@@ -83,7 +83,7 @@ export function ExperienceTimeline() {
                 Repurposed the overhauled microsystem to co-author novel research, utilizing the custom, highly sensitive capacitive pressure sensor and accelerometer to 
                 accurately obtain the pressure spectra describing underwater vortex shedding from a submerged bluff body.
                 <br />
-                Used the muli-modal data to validate theoretical Strouhal frequencies across varying flow conditions.
+                Used the multi-modal data to validate theoretical Strouhal frequencies across varying flow conditions.
               </span>
             </div>
             <div className="flex gap-3 items-start">
