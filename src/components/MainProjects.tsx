@@ -9,7 +9,7 @@ export function MainProjects() {
 
       <BentoGridItem
        title={
-          <div className="flex text-base md:text-xl items-center justify-center gap-3">
+          <div className="flex text-lg md:text-2xl items-center justify-center gap-3">
             <span>CENT Paper Emulation</span>
             <a 
               href="https://github.com/AbdullahHendy/cent-emulation-aws-f2" 
@@ -18,7 +18,7 @@ export function MainProjects() {
               className="text-slate-500 hover:text-emerald-400 transition-colors cursor-pointer"
               title="View Source on GitHub"
             >
-              <FiGithub className="w-4 h-4 md:w-6 md:h-6" />
+              <FiGithub className="w-4 h-4 md:w-6 md:h-6 transition-all aduration-300 hover:scale-115 animate-[bounce_1s_ease-in-out_infinite] hover:animate-none" />
             </a>
           </div>
         }
@@ -46,7 +46,7 @@ export function MainProjects() {
 
       <BentoGridItem
         title={
-          <div className="flex text-base md:text-xl items-center justify-center gap-3">
+          <div className="flex text-lg md:text-2xl items-center justify-center gap-3">
             <span>FastConv2d CUDA Engine</span>
             <a 
               href="https://github.com/AbdullahHendy/fast-conv2d-cuda"
@@ -55,7 +55,7 @@ export function MainProjects() {
               className="text-slate-500 hover:text-emerald-400 transition-colors cursor-pointer"
               title="View Source on GitHub"
             >
-              <FiGithub className="w-4 h-4 md:w-6 md:h-6" />
+              <FiGithub className="w-4 h-4 md:w-6 md:h-6 transition-all duration-300 hover:scale-115 animate-[bounce_1s_ease-in-out_infinite] hover:animate-none" />
             </a>
           </div>
         }
@@ -82,7 +82,7 @@ export function MainProjects() {
 
       <BentoGridItem
         title={
-          <div className="flex text-base md:text-xl items-center justify-center gap-3">
+          <div className="flex text-lg md:text-2xl items-center justify-center gap-3">
             <span>Mars Mission Emulation</span>
             <a 
               href="https://github.com/csun-opencv/Mars-Mission-Emulation" 
@@ -91,7 +91,7 @@ export function MainProjects() {
               className="text-slate-500 hover:text-emerald-400 transition-colors cursor-pointer"
               title="View Source on GitHub"
             >
-              <FiGithub className="w-4 h-4 md:w-6 md:h-6" />
+              <FiGithub className="w-4 h-4 md:w-6 md:h-6 transition-all aduration-300 hover:scale-115 animate-[bounce_1s_ease-in-out_infinite] hover:animate-none" />
             </a>
           </div>
         }
@@ -119,7 +119,7 @@ export function MainProjects() {
 
       <BentoGridItem
         title={
-          <div className="flex text-base md:text-xl items-center justify-center gap-3">
+          <div className="flex text-lg md:text-2xl items-center justify-center gap-3">
             <span>Audio Amplifier</span>
             <a 
               href="https://github.com/AbdullahHendy/Speaker-PCB"
@@ -128,7 +128,7 @@ export function MainProjects() {
               className="text-slate-500 hover:text-emerald-400 transition-colors cursor-pointer"
               title="View Source on GitHub"
             >
-              <FiGithub className="w-4 h-4 md:w-6 md:h-6" />
+              <FiGithub className="w-4 h-4 md:w-6 md:h-6 transition-all aduration-300 hover:scale-115 animate-[bounce_1s_ease-in-out_infinite] hover:animate-none" />
             </a>
           </div>
         }

@@ -1,0 +1,260 @@
+---
+import { FiGithub, FiExternalLink } from "react-icons/fi";
+
+const projects = [
+  {
+    title: "Abdullahs Portfolio",
+    image: "/abdullahs-portfolio.png",
+    description:
+      "This Website! My personal portfolio showcasing a bit about my technical background, experiences, projects, and skills. Built with Astro, React (edited Aceternity UI Components), and Tailwind CSS with attention to mobile user experience too. The website is hosted on GitHub Pages with a custom domain name.",
+    stack: [
+      "Web Development",
+      "Static Site Generation",
+      "Astro",
+      "React",
+      "Tailwind CSS",
+      "GitHub Pages",
+      "namecheap",
+      "CI/CD",
+    ],
+    github: "https://github.com/AbdullahHendy/abdullahs-portfolio",
+  },
+  {
+    title: "CENT Paper Emulation",
+    image: "/cent-emulation.png",
+    description:
+      "A cycle-accurate FPGA emulation of a CENT paper device - targeting Amazon F2 cloud FPGA instances - using Ramulator2 DRAM simulator and Winbond LPDDRx as references for DDR PIM timing models. Also extending the open-source LiteDRAM project to support the new CENT-specific DRAM commands in memory controllers of LPDDRx models.",
+    stack: [
+      "Computer Architecture",
+      " Heterogeneous Computing",
+      "LLM Inference",
+      "Cloud FPGA",
+      "VHDL",
+      "C",
+      "Xilinx Virtex Ultrascale+",
+      "Ramulator2",
+      "LiteDRAM",
+      "DDR",
+      "PIM",
+      "RISC-V",
+      "Vivado",
+      "Vitis",
+    ],
+    github: "https://github.com/AbdullahHendy/cent-emulation-aws-f2",
+  },
+  {
+    title: "FastConv2d CUDA Engine",
+    image: "/cnn.png",
+    description:
+      "Custom CUDA 2D convolution engines hooked into PyTorch via C++ extensions. Faster than PyTorch/cuDNN by 3x on a LeNet-style CNN.",
+    stack: [
+      "Parallel Computing",
+      "Machine Learning",
+      "GPU Programming",
+      "CNN",
+      "CUDA",
+      "C++",
+      "PyTorch",
+    ],
+    github: "https://github.com/AbdullahHendy/fast-conv2d-cuda",
+  },
+  {
+    title: "Mars Mission Emulation",
+    image: "/mars-mission-emulation.png",
+    description:
+      "A Pixhawk-based object detection drone wirelessly commanding a wheeled bare-metal robot to perform tasks, mimicking the NASA's Mars Exploration Mission. Finalist in the 2023 OpenCV AI Competition.",
+    stack: [
+      "Computer Vision",
+      "Robotics",
+      "Drone",
+      "3D Printing",
+      "TPU Acceleration",
+      "Bluetooth - SPP",
+      "Pixhawk",
+      "TI RSLK MAX",
+      "Raspberry Pi",
+      "OpenCV",
+      "TensorFlow",
+      "C++",
+      "Python",
+    ],
+    github:
+      "https://github.com/csun-opencv/Mars-Mission-Emulation/blob/main/README.md",
+  },
+  {
+    title: "Audio Amplifier",
+    image: "/pcb-3d.png",
+    description:
+      "A complete open source design of a 5W class AB audio amplifier with a power supply circuit and a speaker with high-fidelity sound quality. The repository includes full documentation (including rigorous thermal and tolerance analysis, component selection criteria, etc.), schematics, and fabrication files.",
+    stack: [
+      "Analog Electronics",
+      "PCB Design",
+      "PCB Assembly",
+      "Circuit Design",
+      "Audio Engineering",
+      "Class AB Amplifier",
+      "LTSpice",
+      "KiCAD",
+    ],
+    github: "https://github.com/AbdullahHendy/Speaker-PCB",
+  },
+  {
+    title: "Live Translation",
+    image: "/live-translation-pipeline.png",
+    description:
+      "A low-latency multilingual translation engine integrating Faster Whisper and Opus-MT models that support CLI usage and API integration to support downstream applications. Achieved real-time streaming through WebSockets and Opus codec compression. Packaged and published as a Python PyPI package for easy installation and usage. The repository provides multiple integration examples.",
+    stack: [
+      "Natural Language Processing",
+      "Audio Processing",
+      "Audio Encoding",
+      "PyPI Packaging",
+      "Backend Development",
+      "Accessibility",
+      "Faster Whisper",
+      "Opus-MT",
+      "WebSockets",
+      "CI/CD",
+    ],
+    github: "https://github.com/AbdullahHendy/live-translation",
+  },
+  {
+    title: "Catch This AI",
+    image: "/catch-this-ai.png",
+    description:
+      "A cross-platform Flutter background application that detects AI buzzwords in real-time (live Audio Speech Recognition and Keyword Spotting), saving detected words statistics locally using HiveDB to show trends.",
+    stack: [
+      "Natural Language Processing",
+      "Raw PCM",
+      "Android Development",
+      "Flutter",
+      "Dart",
+      "HiveDB",
+      "Audio Processing",
+      "CI/CD",
+    ],
+    github: "https://github.com /AbdullahHendy/catch-this-ai",
+  },
+  {
+    title: "Clickworthy Resume",
+    image: "/clickworthy-resume.png",
+    description:
+      "A simple, flexible, responsive, ATS-friendly, and click-worthy resume template using Typst markup language. Extra cover letter and extendable to a CV. The template is available on official Typst Universe template repository for easy usage in the browser.",
+    stack: [
+      "Resume/CV Template",
+      "ATS-Friendly",
+      "Markup",
+      "Typst",
+      "Typst Universe",
+      "CI/CD",
+    ],
+    github: "https://github.com/AbdullahHendy/clickworthy-resume",
+  },
+  {
+    title: "FPGA Starter Projects",
+    image: "/shot-clock.png",
+    description:
+      "A collection of starter FPGA projects targeting Digilent's Zybo Z7-10 board, covering a wide range of topics including UART core design, VGA graphics, state machine design, PWM, and more. Features a shot clock project with host controls over UART, 7-segment display output, and a buzzer alarm (The buzzer is the Speaker PCB project above!). Video demo link is available in the repository.",
+    stack: [
+      "Digital Design",
+      "State Machines",
+      "Pulse Width Modulation",
+      "Zybo Z7-10",
+      "FPGA",
+      "VHDL",
+      "UART",
+      "VGA",
+      "PMOD",
+      "Vivado",
+    ],
+    github: "https://github.com/AbdullahHendy/FPGA-Projects",
+  },
+  {
+    title: "Numerical Analysis Textbook Solutions",
+    image: "/numerical-analysis.png",
+    description:
+      "A collection of solutions to problems from the Numerical Analysis 10th edition textbook, implemented using Python and NumPy.",
+    stack: [
+      "Numerical Analysis",
+      "Root Finding",
+      "Numerical Interpolation/Extrapolation",
+      "Numerical Differentiation/Integration",
+      "Python",
+      "NumPy",
+    ],
+    github: "https://github.com/AbdullahHendy/Numerical-Analysis",
+  },
+];
+---
+
+<section class="w-full max-w-5xl mx-auto px-4 py-12 flex flex-col gap-12">
+  {/* Section Header */}
+  <div class="w-full flex items-center justify-center mb-4">
+    <div class="h-px bg-emerald-900/35 w-full"></div>
+    <span
+      class="px-4 font-mono font-bold text-lg md:text-xl text-slate-500 uppercase tracking-[0.3em] whitespace-nowrap"
+    >
+      /* PROJECTS */
+    </span>
+    <div class="h-px bg-emerald-900/35 w-full"></div>
+  </div>
+
+  {/* Vertical Project Stack */}
+  <div class="flex flex-col gap-20 items-center">
+    {
+      projects.map((project) => (
+        <div class="w-full max-w-4xl flex flex-col items-center group">
+          {/* Top: Title & GitHub Link */}
+          <div class="w-full flex items-center justify-center relative mb-6">
+            <h3 class="text-lg md:text-2xl font-bold text-slate-200 group-hover:text-emerald-400 transition-colors text-center">
+              {project.title}
+            </h3>
+
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="absolute right-0 text-slate-500 hover:text-emerald-400 transition-colors"
+                aria-label="View Source on GitHub"
+              >
+                <FiGithub className="w-6 h-6 md:w-8 md:h-8 transition-all aduration-300 hover:scale-115 animate-[bounce_0.5s_ease-in-out_infinite] hover:animate-none" />
+              </a>
+            )}
+          </div>
+
+          {/* Middle: Image */}
+          {project.image && (
+            <div class="w-full md:w-3/4 aspect-video rounded-xl overflow-hidden border border-white/10 bg-slate-950 relative mb-8">
+              <a
+                href={project.image}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block w-full h-full p-2"
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  class="w-full h-full object-contain cursor-pointer group-hover:scale-105 transition-transform duration-700"
+                />
+              </a>
+            </div>
+          )}
+
+          {/* Bottom: Description */}
+          <p class="font-mono font-bold text-slate-300 text-base md:text-xl leading-relaxed mb-8 text-center px-4 md:px-12">
+            {project.description}
+          </p>
+
+          {/* Footer: Tech Stack */}
+          <div class="flex flex-wrap justify-center gap-3">
+            {project.stack.map((tech) => (
+              <span class="px-3 py-1.5 bg-slate-900/50 border border-white/5 text-emerald-500 font-mono text-sm md:text-base rounded-md">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

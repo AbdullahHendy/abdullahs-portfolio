@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import FullProject from "../components/FullProject.astro";
+import FullExperience from "../components/FullExperience.astro";
 import Footer from "../components/Footer.astro";
 
 const title = "Abdullah Hendy | Projects";
@@ -7,5 +9,7 @@ const description = "Projects by Abdullah Hendy";
 ---
 
 <BaseLayout title={title} description={description}>
+  <FullProject />
+
   <Footer />
 </BaseLayout>
