@@ -39,7 +39,13 @@ export function ExperienceTimeline() {
               <span className="text-slate-200">
                 Extending the open-source project, LiteDRAM, to add support for CENT-specific DRAM commands in memory controllers of LPDDRx models to be instantiated in the emulation design.
               </span>
-            </div>            
+            </div>
+            <div className="flex gap-3 items-start">
+              <span className="text-emerald-500 mt-0.5">{"[>]"}</span>
+              <span className="text-slate-200">
+                Developing host C software to drive hardware execution over PCIe MMIO, scheduling inference workloads across the CENT PIM and PNM compute units.
+              </span>
+            </div>  
           </div>
         </div>
       ),
